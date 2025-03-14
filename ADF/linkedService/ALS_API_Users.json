@@ -1,0 +1,12 @@
+{
+	"name": "ALS_API_Users",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://jsonplaceholder.typicode.com/users",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

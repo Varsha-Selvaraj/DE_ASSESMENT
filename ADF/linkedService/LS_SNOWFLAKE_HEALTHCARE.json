@@ -1,0 +1,17 @@
+{
+	"name": "LS_SNOWFLAKE_HEALTHCARE",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "FBUCGJY-GAB18839",
+			"user": "VARSHA",
+			"database": "Healthcare",
+			"warehouse": "COMPUTE_WH",
+			"role": "ACCOUNTADMIN",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUzNDVCN0UyLTUxRUEtNEE5QS1BNEI4LUZEOUU3RkFDOUM1MF8wZDQyZjkzMi1jNGEzLTRmZjItOGQ0OC03MGFlNmYxNDczZTEiDQp9"
+		}
+	}
+}

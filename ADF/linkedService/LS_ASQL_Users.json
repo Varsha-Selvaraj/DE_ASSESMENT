@@ -1,0 +1,17 @@
+{
+	"name": "LS_ASQL_Users",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "sampleserver00.database.windows.net",
+			"database": "sampleDB00",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "varsha",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUzNDVCN0UyLTUxRUEtNEE5QS1BNEI4LUZEOUU3RkFDOUM1MF81YjEyZDZlMy0wNTQ3LTQ4MDQtYWM3Mi1hMjNjY2RjOWVkYWMiDQp9"
+		}
+	}
+}

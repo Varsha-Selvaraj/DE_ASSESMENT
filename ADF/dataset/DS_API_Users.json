@@ -1,0 +1,12 @@
+{
+	"name": "DS_API_Users",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ALS_API_Users",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}

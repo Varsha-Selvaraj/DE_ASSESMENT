@@ -1,0 +1,147 @@
+{
+	"name": "DS_SNOWFLAKE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SNOWFLAKE_HEALTHCARE",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"snow_table": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "TABLE_CATALOG",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "TABLE_SCHEMA",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "TABLE_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "TABLE_OWNER",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "TABLE_TYPE",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_TRANSIENT",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "CLUSTERING_KEY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "ROW_COUNT",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "BYTES",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "RETENTION_TIME",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "SELF_REFERENCING_COLUMN_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "REFERENCE_GENERATION",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "USER_DEFINED_TYPE_CATALOG",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "USER_DEFINED_TYPE_SCHEMA",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "USER_DEFINED_TYPE_NAME",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_INSERTABLE_INTO",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_TYPED",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "COMMIT_ACTION",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "CREATED",
+				"type": "TIMESTAMP_LTZ"
+			},
+			{
+				"name": "LAST_ALTERED",
+				"type": "TIMESTAMP_LTZ"
+			},
+			{
+				"name": "LAST_DDL",
+				"type": "TIMESTAMP_LTZ"
+			},
+			{
+				"name": "LAST_DDL_BY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "AUTO_CLUSTERING_ON",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "COMMENT",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_TEMPORARY",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_ICEBERG",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_DYNAMIC",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_IMMUTABLE",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "IS_HYBRID",
+				"type": "VARCHAR"
+			}
+		],
+		"typeProperties": {
+			"schema": "STAGE",
+			"table": {
+				"value": "@dataset().snow_table",
+				"type": "Expression"
+			}
+		}
+	}
+}

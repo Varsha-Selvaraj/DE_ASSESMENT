@@ -1,0 +1,38 @@
+{
+	"name": "DS_Sales_Excel",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ABLB_Excel_Customer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Data",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Customer.xlsx",
+				"container": "sales-excel"
+			},
+			"range": "A4:E10000",
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			},
+			{
+				"type": "String"
+			}
+		]
+	}
+}

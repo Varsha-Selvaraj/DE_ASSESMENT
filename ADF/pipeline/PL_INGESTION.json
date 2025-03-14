@@ -1,0 +1,91 @@
+{
+	"name": "PL_INGESTION",
+	"properties": {
+		"activities": [
+			{
+				"name": "TRAVERSING THROUGH TABLES IN SQL SERVER",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.table_names",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "COPY DATA FROM EACH TABLE",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "SqlServerSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
+								"sink": {
+									"type": "SnowflakeV2Sink",
+									"importSettings": {
+										"type": "SnowflakeImportCopyCommand"
+									}
+								},
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "LS_ABLB_HEALTHCARE",
+										"type": "LinkedServiceReference"
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "DS_SQL_SERVER",
+									"type": "DatasetReference",
+									"parameters": {
+										"table": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "DS_SNOWFLAKE",
+									"type": "DatasetReference",
+									"parameters": {
+										"snow_table": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"table_names": {
+				"type": "array",
+				"defaultValue": [
+					"CUSTOMERS",
+					"PRODUCTS",
+					"TRANSACTIONS",
+					"COUNTRY_REGION"
+				]
+			}
+		},
+		"annotations": []
+	}
+}

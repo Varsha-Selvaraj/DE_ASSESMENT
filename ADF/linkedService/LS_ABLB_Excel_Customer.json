@@ -1,0 +1,11 @@
+{
+	"name": "LS_ABLB_Excel_Customer",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobStorage",
+		"typeProperties": {
+			"sasUri": "https://samplestorage00.blob.core.windows.net/healthcare?sp=rl&st=2025-03-13T12:11:15Z&se=2025-03-17T20:11:15Z&skoid=df73f57e-a51e-483f-b8ec-f4d2eeb0ea9e&sktid=2800c0a0-70e9-49be-8733-faeaa6aced99&skt=2025-03-13T12:11:15Z&ske=2025-03-17T20:11:15Z&sks=b&skv=2022-11-02&sv=2022-11-02&sr=c&sig=co67pqYKWiJeBSYXj373FJDyE6yEXO4dvhXzncPb6Nc%3D?sp=rl&st=2025-03-13T12:11:15Z&se=2025-03-17T20:11:15Z&skoid=df73f57e-a51e-483f-b8ec-f4d2eeb0ea9e&sktid=2800c0a0-70e9-49be-8733-faeaa6aced99&skt=2025-03-13T12:11:15Z&ske=2025-03-17T20:11:15Z&sks=b&skv=2022-11-02&sv=2022-11-02&sr=c&sig=co67pqYKWiJeBSYXj373FJDyE6yEXO4dvhXzncPb6Nc%3D"
+		}
+	}
+}
