@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: sources
+    database: HEALTHCARE
+    schema: RAW
+    tables:
+      - name: CUSTOMERS
+      - name: PRODUCTS
+      - name: TRANSACTIONS
+      - name: COUNTRY_REGION

@@ -1,0 +1,37 @@
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'dbt_first'
+version: '1.0.0'
+profile: 'dbt_first'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:        
+  - "target"
+  - "dbt_packages"
+
+
+models:
+  dbt_first:
+    Stage:
+      +schema: stage
+      +materialized: table
+    Mart:
+      +schema: mart
+      +materialized: table
+
+seeds:
+  healthcare:
+    schema: 
+      +column_types:
+        customer_id: string
+        country: string
+        region: string
+  +schema: raw
+  +delimiter: ";"
